@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>hello world</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <h3>Hello World</h3>
+    <input type="text" ng-model="firstName">
+    {{firstName}}
+
+    <div class="full-width">
+        <div class="marginAuto">
+            <div class="outputScreen">
+                <span>{{output}}</span><br><span>{{operationToken}}</span>
+            </div>
+            <div class="inputScreen">
+                <ul class="list-inline">
+                    <li class="btn btn-default btn-sm" ng-click="updateOutput(data)" value="{{data}}" ng-repeat="data in inputData track by $index">{{data}}</li>
+                    <li class="btn btn-default btn-sm" ng-click="add()">+</li>
+                    <li class="btn btn-default btn-sm" ng-click="subtract()">-</li>
+                    <li class="btn btn-default btn-sm" ng-click="clear()">C</li>
+                    <li class="btn btn-default btn-sm" ng-click="calculate()">=</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

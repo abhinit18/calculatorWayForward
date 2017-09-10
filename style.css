@@ -1,0 +1,9 @@
+.full-width{
+    float:left;width:100%;
+}
+.marginAuto{
+    margin:0 auto;max-width: 400px;width: 100%;
+}
+.outputScreen{
+    border:1px solid gray;height:50px;width:100%;float: left;width: 100%;
+}
